@@ -1,31 +1,26 @@
-# KPI Dashboard (mapa) — Metabase + SQL
+# Business Intelligence & KPI Reporting System
 
-Repo pokazuje koncepcję raportowania KPI dla marketingu/zarządu.
-Nie zawiera danych produkcyjnych ani sekretów.
+A centralized, real-time analytics dashboard system built to replace scattered, manually updated Excel spreadsheets. It serves as a "Single Source of Truth" (SSOT) for the management and marketing teams.
 
-## Problem
-- dane rozproszone w wielu źródłach
-- ręczne raporty są wolne i podatne na błędy
-- brak jednego miejsca do KPI i trendów
+## 🎯 The Business Problem
+Before implementation, business reporting relied heavily on manual data extraction:
+* **Data Silos:** Information was scattered across different platforms, databases, and local files.
+* **Delayed Insights:** Generating weekly reports took hours of manual work, meaning management was always looking at historical, not current, data.
+* **Lack of Trust:** Multiple versions of the same Excel file led to conflicting numbers and a lack of trust in the data.
 
-## Cel
-Stworzyć jedno źródło prawdy:
-- model danych (PostgreSQL)
-- KPI (SQL: widoki / zapytania)
-- dashboardy (Metabase)
-- alerty i raporty cykliczne
+## 💡 The Solution
+This project introduces a centralized Business Intelligence layer using **Metabase** connected to a **PostgreSQL** data warehouse.
 
-## Architektura (high level)
-1. Dane trafiają do PostgreSQL (ETL / integracje)
-2. Widoki SQL pod KPI
-3. Metabase dashboardy:
-   - kampanie, promocje, sprzedaż, trendy
-4. Alerty (np. spadek KPI, brak danych)
+### Key Features:
+* **Real-Time Dashboards:** Interactive visual reports for marketing ROI, sales trends, and operational bottlenecks.
+* **Automated Alerts:** Slack and email notifications triggered automatically when critical KPIs drop below defined thresholds.
+* **Optimized SQL Views:** Complex business logic and data aggregation are handled at the database level via materialized views, ensuring fast dashboard load times.
+* **Self-Service Analytics:** Empowering non-technical team members to filter and explore data without writing SQL or asking developers for help.
 
-## Technologie
-- PostgreSQL
-- SQL
-- Metabase
+## 🛠️ Tech Stack
+* **BI Tool:** Metabase
+* **Database:** PostgreSQL
+* **Query Language:** Advanced SQL (CTEs, Window Functions, Materialized Views)
 
-## Bezpieczeństwo
-Repo zawiera tylko mapę i opis.
+---
+*Note: This repository outlines the architectural setup and SQL logic structures. Actual business data, database credentials, and proprietary queries have been omitted to comply with NDA and security standards.*
