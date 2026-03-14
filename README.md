@@ -24,3 +24,5 @@ This project introduces a centralized Business Intelligence layer using **Metaba
 
 ---
 *Note: This repository outlines the architectural setup and SQL logic structures. Actual business data, database credentials, and proprietary queries have been omitted to comply with NDA and security standards.*
+
+👉 **Sanitized, structural examples of the database logic (SQL) and infrastructure (Docker) are provided in the `sql/` and `docker/` directories.**
